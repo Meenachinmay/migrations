@@ -1,0 +1,9 @@
+[package]
+name = "migrations"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# We'll use sqlx for database operations, but you can use any tool you prefer
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "migrate"] }
+tokio = { version = "1", features = ["rt", "macros"] }
